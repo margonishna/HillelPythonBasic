@@ -14,17 +14,20 @@
 # - у будь-якому іншому випадку - вивести "А білетів вже немає!"
 
 age = input("Enter your age: ")
-if age.isdigit() != True:
+if not age.isdigit():
     print("Не є числом!")
 else:
     int_age = int(age)
-    if int_age in (11,22,33,44,55,66,77,88,99):
-        print("Який цікавий вік!")
-    elif (int_age < 7):
-        print ("Де твої батьки?")
-    elif (int_age < 16):
-        print("Це фільм для дорослих!")
-    elif (int_age >= 65):
-        print("Покажіть пенсійне посвідчення!")
+    if int_age == 0:
+        print("З днем народження!")
     else:
-        print("А білетів вже немає!")
+        if int_age in (11, 22, 33, 44, 55, 66, 77, 88, 99):
+            print("Який цікавий вік!")
+        elif (int_age < 7):
+            print ("Де твої батьки?")
+        elif (int_age < 16):
+            print("Це фільм для дорослих!")
+        elif (int_age >= 65):
+            print("Покажіть пенсійне посвідчення!")
+        else:
+            print("А білетів вже немає!")
