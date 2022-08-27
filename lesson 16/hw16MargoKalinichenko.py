@@ -28,7 +28,7 @@ else:
                 res_json = result.json()
                 res_final_list = [str(date)]
                 for number, value in enumerate(res_json, start=1):
-                    list_every_currency = str(number) + ". " + value['txt'] + " to UAH: " + str(value['rate'])
-                    res_final_list.append(list_every_currency)
+                    every_currency = str(number) + ". " + value['txt'] + " to UAH: " + str(value['rate'])
+                    res_final_list.append(every_currency)
                 with open('exchange_result.txt', 'wt', encoding='utf-8') as file:
                     file.write('\n'.join(res_final_list))
